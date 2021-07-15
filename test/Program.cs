@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace test
 {
@@ -26,11 +27,41 @@ namespace test
             string str = "1000";
             short x = Convert.ToInt16(str);
             Console.WriteLine(x);
-            Console.WriteLine("¬ведите число:");
+            Console.WriteLine("Input number:");
             string y = Console.ReadLine();
             int z = Convert.ToInt32(y);
             z = z * z;
-            Console.WriteLine(z);
+            if(z >= 0  )
+            {
+                Console.WriteLine(z);
+            }
+            else
+            {
+                Console.WriteLine("Are you idiot?");
+            }
+            Console.WriteLine("Input number:");
+            string text = Console.ReadLine();
+            int xxx = Convert.ToInt32(text);
+            string result = xxx > 100 ? "more than 100" : "less than 100";
+            Console.WriteLine("Result: " + result);
+            Console.WriteLine("Input number again:");
+            string text2 = Console.ReadLine();
+            int x_x = Convert.ToInt32(text2);
+            switch (x_x)
+            {
+                case 1:
+                    Console.WriteLine("Number 1");
+                    break;
+                case 2:
+                    Console.WriteLine("Number 2");
+                    break;
+                case 3:
+                    Console.WriteLine("Number 3");
+                    break;
+                default:
+                    Console.WriteLine("You entered a large number!");
+                    break;
+            }
             Console.ReadKey();
 
         }
